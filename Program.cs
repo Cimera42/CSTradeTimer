@@ -21,7 +21,7 @@ namespace CSTradeTimer
 			var passworddata = Encoding.ASCII.GetBytes ("password=" + password);
 			while(true)
 			{
-				string startUrl = "http://10.0.0.53:4001/php/backend/new_pot.php";
+				string startUrl = "http://10.0.0.53:4001/backend/new_pot.php";
 				HttpWebRequest startRequest = (HttpWebRequest) WebRequest.Create (startUrl);
 
 				startRequest.Method = "POST";
@@ -52,7 +52,7 @@ namespace CSTradeTimer
 				}
 				Console.WriteLine("Timer ended");
 
-				string endUrl = "http://10.0.0.53:4001/php/backend/end_timer.php";
+				string endUrl = "http://10.0.0.53:4001/backend/end_timer.php";
 				HttpWebRequest endRequest = (HttpWebRequest) WebRequest.Create (endUrl);
 
 				endRequest.Method = "POST";
@@ -67,7 +67,7 @@ namespace CSTradeTimer
 				Console.WriteLine("estr: " + endString);
 				Console.WriteLine("Timer end message sent");
 
-				string processUrl = "http://10.0.0.53:4001/php/backend/choose_winner.php";
+				string processUrl = "http://10.0.0.53:4001/backend/choose_winner.php";
 				HttpWebRequest processRequest = (HttpWebRequest) WebRequest.Create (processUrl);
 
 				processRequest.Method = "POST";

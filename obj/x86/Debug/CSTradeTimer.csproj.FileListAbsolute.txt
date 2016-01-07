@@ -5,3 +5,10 @@ C:\Users\Tim\Documents\Coding\C#\CSTradeTimer\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Tim\Documents\Coding\C#\CSTradeTimer\obj\x86\Debug\CSTradeTimer.csprojResolveAssemblyReference.cache
 C:\Users\Tim\Documents\Coding\C#\CSTradeTimer\obj\x86\Debug\CSTradeTimer.exe
 C:\Users\Tim\Documents\Coding\C#\CSTradeTimer\obj\x86\Debug\CSTradeTimer.pdb
+C:\Users\Tim\Documents\Coding\C#\CSTradeTimer\CSTradeTimer.git\trunk\bin\Debug\CSTradeTimer.exe
+C:\Users\Tim\Documents\Coding\C#\CSTradeTimer\CSTradeTimer.git\trunk\bin\Debug\CSTradeTimer.pdb
+C:\Users\Tim\Documents\Coding\C#\CSTradeTimer\CSTradeTimer.git\trunk\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tim\Documents\Coding\C#\CSTradeTimer\CSTradeTimer.git\trunk\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Tim\Documents\Coding\C#\CSTradeTimer\CSTradeTimer.git\trunk\obj\x86\Debug\CSTradeTimer.csprojResolveAssemblyReference.cache
+C:\Users\Tim\Documents\Coding\C#\CSTradeTimer\CSTradeTimer.git\trunk\obj\x86\Debug\CSTradeTimer.exe
+C:\Users\Tim\Documents\Coding\C#\CSTradeTimer\CSTradeTimer.git\trunk\obj\x86\Debug\CSTradeTimer.pdb
