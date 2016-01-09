@@ -1,8 +1,8 @@
 ﻿<Properties StartupItem="CSTradeTimer.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\SteamBot\trunk\SteamBot\OwnUserHandler.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="..\..\..\SteamBot\trunk\SteamBot\OwnUserHandler.cs" Line="111" Column="72" />
+      <File FileName="Program.cs" Line="32" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
