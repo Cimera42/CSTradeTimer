@@ -17,14 +17,11 @@ namespace CSTradeTimer
 
 		public static void Main (string[] args)
 		{
-			string password = System.IO.File.ReadAllText(@"F:\Stuff\Websites\cstrade_admin_password.txt");
+			string password = System.IO.File.ReadAllText(@"../cstrade_admin_password.txt");
 			var passworddata = Encoding.ASCII.GetBytes ("password=" + password);
-			var updatePricePer = 240; //Update prices every X pots (currently every 2 hours (30sec pots))
-			var updatePriceCount = 239; //Update at start of program
 			while(true)
 			{
-				updatePriceCount++;
-				string startUrl = "http://127.0.0.1:7001/backend/new_pot.php";
+				string startUrl = "http://skinbonanza.com/backend/new_pot.php";
 				HttpWebRequest startRequest = (HttpWebRequest) WebRequest.Create (startUrl);
 
 				startRequest.Method = "POST";
@@ -66,7 +63,7 @@ namespace CSTradeTimer
 					}
 					Console.WriteLine ("Timer ended");
 
-					string endUrl = "http://127.0.0.1:7001/backend/end_timer.php";
+					string endUrl = "http://skinbonanza.com/backend/end_timer.php";
 					HttpWebRequest endRequest = (HttpWebRequest)WebRequest.Create (endUrl);
 
 					endRequest.Method = "POST";
@@ -82,7 +79,7 @@ namespace CSTradeTimer
 					Console.WriteLine ("estr: " + endString);
 					Console.WriteLine ("Timer end message sent");
 
-					string processUrl = "http://127.0.0.1:7001/backend/choose_winner.php";
+					string processUrl = "http://skinbonanza.com/backend/choose_winner.php";
 					HttpWebRequest processRequest = (HttpWebRequest)WebRequest.Create (processUrl);
 
 					processRequest.Method = "POST";
@@ -117,15 +114,6 @@ namespace CSTradeTimer
 					}
 
 					Thread.Sleep (3000);
-
-					if (updatePriceCount == updatePricePer) {
-						updatePriceCount = 0;
-
-						System.Diagnostics.Process proc = new System.Diagnostics.Process ();
-						proc.StartInfo.FileName = "F:\\Stuff\\Websites\\CSTrade\\trunk\\updatePrices.bat";
-						proc.StartInfo.WorkingDirectory = "F:\\Stuff\\Websites\\CSTrade\\trunk\\";
-						proc.Start ();
-					}
 				}
 			}
 		}
