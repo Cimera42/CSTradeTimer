@@ -19,7 +19,9 @@ namespace CSTradeTimer
 		{
 			string password = System.IO.File.ReadAllText(@"../cstrade_admin_password.txt");
 			var passworddata = Encoding.ASCII.GetBytes ("password=" + password);
-			while(true)
+
+			bool somethingFailed = false;
+			while(somethingFailed == false)
 			{
 				string startUrl = "http://skinbonanza.com/backend/new_pot.php";
 				HttpWebRequest startRequest = (HttpWebRequest) WebRequest.Create (startUrl);
@@ -34,7 +36,7 @@ namespace CSTradeTimer
 
 				TimerData data = new TimerData();
 				bool startSucceeded = false;
-				for(int attemptNum = 0; attemptNum < 10; attemptNum++)
+				for(int attemptNum = 0; attemptNum < 5; attemptNum++)
 				{
 					try {
 						HttpWebResponse startResponse = (HttpWebResponse)startRequest.GetResponse ();
@@ -91,7 +93,7 @@ namespace CSTradeTimer
 					}
 
 					bool processSucceeded = false;
-					for (int attemptNum = 0; attemptNum < 10; attemptNum++) {
+					for (int attemptNum = 0; attemptNum < 5; attemptNum++) {
 						try {
 							HttpWebResponse processResponse = (HttpWebResponse)processRequest.GetResponse ();
 							string processString = new StreamReader (processResponse.GetResponseStream ()).ReadToEnd ();
@@ -111,9 +113,14 @@ namespace CSTradeTimer
 						Console.WriteLine ("####################");
 						Console.WriteLine ("CATASTROPHIC FAILURE");
 						Console.WriteLine ("####################");
+						somethingFailed = true;
 					}
 
 					Thread.Sleep (3000);
+				}
+				else
+				{
+					somethingFailed = true;
 				}
 			}
 		}
