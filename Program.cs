@@ -122,6 +122,11 @@ namespace CSTradeTimer
 				{
 					somethingFailed = true;
 				}
+
+				if(System.IO.File.Exists(@"./stopTimer.txt"))
+				{
+					somethingFailed = true;
+				}
 			}
 		}
 	}
